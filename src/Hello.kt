@@ -8,6 +8,8 @@ fun main ( args : Array < String > ) {
 	valVsVar ()
 	stringSubString ()
 	containsInArray ()
+	arrayDynamics ()
+	nullability ()
 }
 
 fun dummy () {
@@ -89,10 +91,39 @@ fun containsInArray () {
 	var myArray = arrayOf ( 1, "Kotlin", 3.14 )
 	if ( myArray.contains ( "Kotlin" ) ) {
 		print ( "myArray is Dynamic\n" )
-		print ( myArray )
+		print ( "$myArray\n\n" )
 	}
 }
 
 fun arrayDynamics () {
-	
+}
+
+fun nullability () {
+	var blueColor = null
+	println ( blueColor )
+
+	var rainbowColor : String? = null
+	println ( rainbowColor )
+
+	/*Below statements is invalid because we can't assign null value to a non-null data type.*/
+	// val str : String = null
+	// println ( str )
+
+	val amount : Double? = 10.11
+	println ( amount )
+
+	var listStr : List < String ? > ? = listOf ( null, null )
+	var listStr2 : List < String > ? = null
+	println ( "$listStr\n$listStr2" )
+	println ( "size ( listStr ) : ${listStr?.size}\nsize ( listStr2 ) : ${listStr2?.size}" )
+	listStr = null
+
+	// Null Checks
+	var nullTest : Int ? = null
+	if ( nullTest == null ) {
+		print ( "\n$nullTest" )
+		// return 0
+	} else {
+		nullTest += 1
+	}
 }
