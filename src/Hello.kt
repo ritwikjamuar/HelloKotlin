@@ -10,6 +10,7 @@ fun main ( args : Array < String > ) {
 	containsInArray ()
 	arrayDynamics ()
 	nullability ()
+	strings ()
 }
 
 fun dummy () {
@@ -121,9 +122,23 @@ fun nullability () {
 	// Null Checks
 	var nullTest : Int ? = null
 	if ( nullTest == null ) {
-		print ( "\n$nullTest" )
+		println ( "\n$nullTest" )
 		// return 0
 	} else {
 		nullTest += 1
+	}
+}
+
+fun strings () {
+	var trout : String = "trout"
+	var haddock : String = "haddock"
+	var snapper : String = "snapper"
+	println ( "I like to eat $trout and	$snapper, but not a big fan of $haddock." )
+
+	var fishName : Int = 10
+	when ( fishName ) {
+		0 -> println ( "Error" )
+		in 3 .. 12 -> println ( "Good Fish Name" )
+		else -> println ( "OK Fish Name" )
 	}
 }
