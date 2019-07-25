@@ -1,4 +1,4 @@
-fun main(args : Array<String>) {
+fun main ( args : Array < String > ) {
 	// This prints the given argument in the console without a new line.
 	print ( "This is a print statement" )
 

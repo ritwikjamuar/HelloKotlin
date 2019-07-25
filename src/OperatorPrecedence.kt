@@ -1,4 +1,6 @@
-fun main ( args : Array < String > ) {
+import kotlin.math.pow
+
+fun main (args : Array < String > ) {
 	/* In Kotlin, the order precedence is as below (in decreasing order):
 	 * ()     #3
 	 * ^      #2
@@ -9,7 +11,7 @@ fun main ( args : Array < String > ) {
 	 *        Meaning, for operations with same level of operation, the first operation found from left is going to be
 	 *        evaluated. */
 
-	val expression1 : Double = 2 * 3 + 4 / 7 * Math.pow ( 2.0, 3.0 ) - ( 3 - 1 )
+	val expression1 : Double = 2 * 3 + 4 / 7 * 2.0.pow (3.0 ) - ( 3 - 1 )
 	println ( expression1 )
 
 	/* Result Explanation:
@@ -35,7 +37,7 @@ fun main ( args : Array < String > ) {
 	 * => 6 - 2                             ## Precedence #0 -----------------------------------------------------------
 	 * => 4                                 <= ANSWER */
 
-	val expression2 : Double = 4 + 3 - 2 / Math.pow ( 1.0, 6.0 ) * ( 5 * 3 + 2 )
+	val expression2 : Double = 4 + 3 - 2 / 1.0.pow ( 6.0 ) * ( 5 * 3 + 2 )
 	println ( expression2 )
 
 	/* Result Explanation:

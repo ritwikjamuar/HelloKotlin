@@ -1,4 +1,6 @@
-fun main ( args : Array < String > ) {
+import kotlin.math.pow
+
+fun main (args : Array < String > ) {
 	println ( "Select Shape:\n1. Circle\n2. Square\n3. Rectangle\n4. Triangle" )
 	var result : Any ? = null
 	val choice = readLine () !! .toInt ()
@@ -53,11 +55,11 @@ fun main ( args : Array < String > ) {
 }
 
 fun circle ( radius : Int ) : Double {
-	return 3.14159 * Math.pow ( radius.toDouble(), 2.0 )
+	return 3.14159 * radius.toDouble ().pow ( 2.0 )
 }
 
 fun square ( side : Int ) : Int {
-	return Math.pow ( side.toDouble(), 2.0 ).toInt ()
+	return side.toDouble ().pow ( 2.0 ).toInt ()
 }
 
 fun rectangle ( length : Int, breadth : Int ) : Int {
