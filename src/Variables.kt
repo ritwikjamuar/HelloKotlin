@@ -112,7 +112,7 @@
 	// In the below code, after initializing optional value with 'null', while accessing the value, if we assert
 	// using '!!', the statement will raise KotlinNullPointerException, because we are asserting that the value is
 	// a valid, non-null value, but it was not, as evident by the first statement.
-	// To see the effect, uncomment line 111.
+	// To see the effect, uncomment line 117.
 	var mySalary : String ? = null
 	// println ( "My Salary is " + mySalary !! )
 
